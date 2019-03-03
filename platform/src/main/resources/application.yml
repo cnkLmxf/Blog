@@ -1,0 +1,23 @@
+server:
+  port: 8288
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+spring:
+  profiles:
+    active: #spring.profiles.active#
+  application:
+    name: platform
+  datasource:
+    name: blog
+    url: jdbc:mysql://127.0.0.1:3306/blog
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
